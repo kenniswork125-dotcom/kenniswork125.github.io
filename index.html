@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenniswork | The Polymath Story</title>
+    <style>
+        :root {
+            --primary: #ff0055; 
+            --secondary: #00f2ff;
+            --bg: #0b0b0d;
+            --card-bg: rgba(255, 255, 255, 0.03);
+        }
+
+        body { margin: 0; background-color: var(--bg); color: #e0e0e0; font-family: 'Segoe UI', sans-serif; line-height: 1.8; }
+
+        /* Hero Section */
+        header {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), var(--bg)), 
+                        url('https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1000');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+        }
+
+        .profile-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin: 0;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        /* About Me Section - Story Style */
+        .about-section {
+            max-width: 800px;
+            margin: -80px auto 50px auto;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .about-section h2 { color: var(--secondary); font-size: 1.8rem; border-bottom: 2px solid var(--primary); display: inline-block; }
+        .about-text { font-style: italic; color: #bbb; font-size: 1.1rem; }
+
+        /* Grid */
+        .container { max-width: 1100px; margin: 0 auto 100px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 35px;
+            transition: 0.4s;
+        }
+
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 0 20px rgba(255, 0, 85, 0.1); }
+        .card h3 { margin-top: 0; color: var(--secondary); letter-spacing: 1px; }
+
+        /* Ultimate Skill Specific */
+        .ultimate-card {
+            grid-column: 1 / -1; /* Full width */
+            border: 2px dashed var(--secondary);
+            text-align: center;
+            background: linear-gradient(45deg, rgba(0, 242, 255, 0.05), transparent);
+        }
+        .loading-text { animation: blink 1.5s infinite; color: var(--secondary); font-weight: bold; }
+
+        @keyframes blink { 0% { opacity: 0.3; } 50% { opacity: 1; } 100% { opacity: 0.3; } }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="profile-title">KENNISWORK</h1>
+        <p style="letter-spacing: 5px; opacity: 0.7;">THE MULTIDISCIPLINARY ARCHITECT</p>
+    </header>
+
+    <section class="about-section">
+        <h2>About Me: The Journey</h2>
+        <div class="about-text">
+            <p>
+                "အမှောင်ထုထဲကနေ အလင်းကို ရှာဖွေသူတစ်ယောက်လိုပဲ၊ ကျွန်တော့်ရဲ့ ဘဝခရီးလမ်းဟာ logic တွေနဲ့ တည်ဆောက်ထားတဲ့ engineering ကမ္ဘာနဲ့ စိတ်ကူးယဉ်ဆန်တဲ့ ဝတ္ထုလောကကြားမှာ ရှင်သန်နေပါတယ်။" 
+                (ဒီနေရာမှာ သင့်ရဲ့ ဝတ္ထုဆန်တဲ့ ကိုယ်ရေးရာဇဝင် အပြည့်အစုံကို ထည့်သွင်းနိုင်ပါတယ်...)
+            </p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="grid">
+            
+            <div class="card">
+                <h3>01. Marketing Essential</h3>
+                <p>Digital ခြေရာတွေကို ဖန်တီးသူ။ Content Strategy ကနေစလို့ စွဲဆောင်မှုရှိတဲ့ Article ရေးသားခြင်း၊ Graphic Design နဲ့ Video Production အထိ အကုန်အကျုံးဝင်ပါတယ်။</p>
+                <p style="font-size: 0.8rem; opacity: 0.6;">Content • Article • Design • Video</p>
+            </div>
+
+            <div class="card">
+                <h3>02. Storytelling & Critical Thinking</h3>
+                <p>"Vipāka" Dark Fantasy ကမ္ဘာကို တည်ဆောက်သူ။ အတွေးအခေါ်ပိုင်းဆိုင်ရာ ခွဲခြမ်းစိတ်ဖြာမှုတွေနဲ့အတူ နက်ရှိုင်းတဲ့ ဇာတ်လမ်းသွားတွေကို ပုံဖော်ပါတယ်။</p>
+                <p style="font-size: 0.8rem; opacity: 0.6;">Fantasy World Building • Logic Analysis</p>
+            </div>
+
+            <div class="card">
+                <h3>03. Psychology & Rap Rhymes</h3>
+                <p>လူသားတို့ရဲ့ စိတ်ခံစားမှုကို စာသားတွေအဖြစ် ပြောင်းလဲခြင်း။ Human Psychology ကို အခြေခံပြီး နားထောင်သူရဲ့ ရင်ထဲရောက်မယ့် Rap Flow နဲ့ Rhymes များကို ဖန်တီးပါတယ်။</p>
+                <p style="font-size: 0.8rem; opacity: 0.6;">Empathy • Flow Design • Lyricism</p>
+            </div>
+
+            <div class="card ultimate-card">
+                <h3>UNLEASHING THE ULTIMATE SKILL</h3>
+                <p>တစ်ကမ္ဘာလုံးကို တုန်လှုပ်စေမယ့် အဓိက Skill ကတော့ လောလောဆယ် ဖော်စပ်ဆဲ ဖြစ်ပါတယ်။</p>
+                <div class="loading-text">SYSTEM LOADING... 85%</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
